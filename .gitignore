@@ -1,0 +1,4 @@
+# [Root] Bin
+/Bin/*
+!/Bin/README.txt
+/Downloads
