@@ -1,4 +1,5 @@
 # [Root] Bin
 /Bin/*
 !/Bin/README.txt
+/Private
 /Downloads
