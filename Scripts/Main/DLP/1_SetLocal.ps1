@@ -72,7 +72,7 @@ Clear-Host
 Write-Host "    O local está correto?"
     Write-Host ""
     Start-Sleep -Milliseconds 500
-Write-Host "  > " -NoNewline -ForegroundColor Green
+Write-Host "  > " -NoNewline
 Write-Host $currentLocal -ForegroundColor Cyan
     Write-Host ""
 Write-Host "        [S] Sim / [N] Não"
