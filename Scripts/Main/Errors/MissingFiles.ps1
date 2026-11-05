@@ -26,8 +26,6 @@
     }
 }
 
-. $CheckAndAddToArrayList
-
 <# Check all #>
 if (
     (Test-Path -Path "$BinPath/yt-dlp.exe") -and
@@ -40,7 +38,7 @@ if (
     exit
 }
 
-
+. $CheckAndAddToArrayList
 # GUI
 Clear-Host
     Write-Host ""
@@ -54,12 +52,6 @@ Write-Host "        ${MissingFiles}" -ForegroundColor Red
 <# Loop #>
 do {
     Start-Sleep -Seconds 1
-} until (
-    (Test-Path -Path "$BinPath/yt-dlp.exe") -or
-    (Test-Path -Path "$BinPath/ffmpeg.exe") -or
-    (Test-Path -Path "$BinPath/ffplay.exe") -or
-    (Test-Path -Path "$BinPath/ffprobe.exe") -or
-    (Test-Path -Path "$BinPath/cookies.txt")
-)
+} until (Get-ChildItem -Path "$BinPath")
 
 . $RestartScript
