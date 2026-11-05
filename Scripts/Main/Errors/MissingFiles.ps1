@@ -26,18 +26,6 @@
     }
 }
 
-<# Check all #>
-if (
-    (Test-Path -Path "$BinPath/yt-dlp.exe") -and
-    (Test-Path -Path "$BinPath/ffmpeg.exe") -and
-    (Test-Path -Path "$BinPath/ffplay.exe") -and
-    (Test-Path -Path "$BinPath/ffprobe.exe") -and
-    (Test-Path -Path "$BinPath/cookies.txt")
-) {
-    . $RestartScript
-    exit
-}
-
 . $CheckAndAddToArrayList
 # GUI
 Clear-Host
@@ -46,12 +34,7 @@ Write-Host "    Arquivos ausentes" -ForegroundColor Yellow
     Write-Host ""
     Start-Sleep -Seconds 1
     Write-Host ""
-Write-Host "        ${MissingFiles}" -ForegroundColor Red
+Write-Host "        ${MissingFiles}" -ForegroundColor Magenta
     Write-Host ""
-
-<# Loop #>
-do {
-    Start-Sleep -Seconds 1
-} until (Get-ChildItem -Path "$BinPath")
-
-. $RestartScript
+. $PressAnyKey
+(Get-Process -Id $PID).CloseMainWindow()
