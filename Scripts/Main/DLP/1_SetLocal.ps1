@@ -27,7 +27,7 @@ $pathDownloads = Resolve-Path "Downloads"
         . $PressAnyKey
 
         # Next script
-        . "Scripts/Main/DLP/2_SetURL.ps1"
+        . "Scripts/Main/DLP/3_SetURL.ps1"
     }
 }
 
@@ -79,7 +79,7 @@ Write-Host "        [S] Sim / [N] Não"
     Write-Host ""
 $questTheLocal_IS_Corret = Read-Host
 switch ($questTheLocal_IS_Corret) {
-    "S" {. "Scripts/Main/DLP/2_SetURL.ps1"}
+    "S" {. "Scripts/Main/DLP/3_SetURL.ps1"}
     "N" {. "$PSScriptRoot/1_SetLocal.ps1"}
     Default {
         # Restart

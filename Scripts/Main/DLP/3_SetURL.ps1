@@ -37,4 +37,4 @@ Write-Host "    Digite qualquer tecla para reiniciar..."
     Write-Host ""
 $null = [System.Console]::ReadKey($true)
 
-. "$PSScriptRoot/2_SetURL.ps1"
+. "$PSScriptRoot/3_SetURL.ps1"
