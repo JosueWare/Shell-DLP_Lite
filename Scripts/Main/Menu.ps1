@@ -38,8 +38,8 @@ $IgnoreFiles = @(
 )
 
 # Startup scripts
-. "Scripts/Config/DefaultFolders.ps1"
-. "Scripts/Config/SetToPATH.ps1"
+. "Scripts/Config/Set-DefaultFolders.ps1"
+. "Scripts/Config/Set-PATH.ps1"
 
 # Menu
 Clear-Host
